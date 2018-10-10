@@ -1,4 +1,4 @@
-# master-thesis
+# File description
 
 The file Module_MMAS.py contains the functions needed for the computation.
 The file Script_MMAS.py contains the code with the upload of the data and and the evaluation of the functions in Module_MMAS.py.
