@@ -12,5 +12,7 @@ Extracting survival-relevant subnetworks from multi-scale omics data.
 
 
 The two file .csv are the matrix with simulated data (PPI of 50 nodes, 20 observations):
+
 -gxSIM.csv is the matrix with gene expression data, survival data and censor information;
+
 -netSIM.csv is the adjacency matrix of the scale-free simulated PPI network.
