@@ -144,9 +144,9 @@ def greedy_algorithm(df, G, K, alg):
 # Jaccard similarity    
 # =============================================================================
 def jaccard(x,y):
-    inter = len(set.intersection(*[set(x), set(y)]))
-    union = len(set.union(*[set(x), set(y)]))
-    return inter/float(union)
+    inter = set.intersection(*[set(x), set(y)])
+    union = set.union(*[set(x), set(y)])
+    return len(inter)/len(float(union))
 
 # =============================================================================
 # Pathway from node list to edge list (and viceversa)
