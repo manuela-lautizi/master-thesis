@@ -17,7 +17,9 @@ reload(MMAS)
 # =============================================================================
 # Simulated data
 # =============================================================================
-sim_net = pd.read_csv(".../netSIM.csv", index_col = 0)
+# Adjacency matrix simulated network
+sim_net = pd.read_csv(".../netSIM.csv")
+# Matrix with simulated gene expression, survival time and censor data
 sim_gx = pd.read_csv(".../gxSIM.csv")
 
 sim_gx = sim_gx.iloc[:,1:]
@@ -108,8 +110,8 @@ for i in range(simulations):
 # =============================================================================
 # Real Data
 # =============================================================================
-patients = pd.read_csv("...", ",", header = 0)
-G = pd.read_csv("...", "\t", header = None)
+patients = pd.read_csv("...")
+G = pd.read_csv("...")
 
 # =============================================================================
 # Application
