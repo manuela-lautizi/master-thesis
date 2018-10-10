@@ -10,7 +10,7 @@ import pandas as pd
 import numpy as np
 import networkx as nx
 import random
-import Module_MMAS as MMAS 
+import Library_MMAS as MMAS 
 from importlib import reload
 reload(MMAS)
 
