@@ -4,9 +4,9 @@ Extracting survival-relevant subnetworks from multi-scale omics data.
 
 ### Files description
 
--The file Module_MMAS.py contains the functions needed for the computation.
+-The file Library_MMAS.py is the library containing all the functions.
 
--The file Script_MMAS.py contains the code with the upload of the data and and the evaluation of the functions in Module_MMAS.py.
+-The file Script_MMAS.py contains the code with the upload of the data and the evaluation of the functions in Library_MMAS.py.
 
 -The file Simulate.py contains the code that can be used to simulate new data.
 
