@@ -1,6 +1,5 @@
-# Master thesis in Bioinformatics
+## Extracting survival-relevant subnetworks from multi-scale omics data.
 
-Extracting survival-relevant subnetworks from multi-scale omics data.
 
 ### Files description
 
