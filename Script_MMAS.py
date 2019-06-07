@@ -22,8 +22,6 @@ sim_net = pd.read_csv(".../netSIM.csv")
 # Matrix with simulated gene expression, survival time and censor data
 sim_gx = pd.read_csv(".../gxSIM.csv")
 
-sim_gx = sim_gx.iloc[:,1:]
-sim_gx.columns = [str(sim_gx.columns.tolist()[i]) for i in range(len(sim_gx.columns)-2)]+["os_time", "os_event"]
 sim = nx.Graph()
 
 for i in sim_net.columns.tolist():
@@ -130,8 +128,8 @@ ph_max = 1
 
 simulations = 10
 for i in range(simulations):      
-    Graph = bG.copy()
-    param = alpha, beta, rho, ph_min, ph_max, patients, Gaph, ants, K, trials, i
+    Graph = G.copy()
+    param = alpha, beta, rho, ph_min, ph_max, patients, Graph, ants, K, trials, i
     antRes_pca, time_pca, trials_pca, best_pca  = MMAS.MaxMin_AS(param, "pca")
 
 
