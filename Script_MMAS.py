@@ -111,6 +111,21 @@ for i in range(simulations):
 patients = pd.read_csv("...")
 G = pd.read_csv("...")
 
+G.columns = ["A", "B"]
+G.head()
+
+# CREATION OF THE GRAPH
+tuples = [tuple(G.iloc[i]) for i in range(G.shape[0])]
+G = nx.Graph(tuples)
+
+# REMOVE NODES WITHOUT THE GE DATA
+Vertices = list(G.nodes())
+V = list(set(Vertices).intersection([i for i in map(int, patients.columns.tolist()[3:])])) #3
+# i remove from the graph the nodes not in that list (V)
+G.remove_nodes_from(list(set(G.nodes())^set(V)))
+# remove nodes with degree 0
+G.remove_nodes_from(list(nx.isolates(G)))
+
 # =============================================================================
 # Application
 # =============================================================================
