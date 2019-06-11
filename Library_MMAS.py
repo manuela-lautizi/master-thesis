@@ -420,12 +420,12 @@ def extract(G, start, size):
     nodes = []
     
     for i in range(size_sample+1):
-        next_ = random.choice(G.neighbors(start))
+        next_ = random.choice(list(G.neighbors(start)))
         nodes.append(next_)
         start = next_
     alll = []
     for i in nodes:
-        alll.append(G.neighbors(i))
+        alll.append(list(G.neighbors(i)))
     
     alll = sum(alll, [])
 
