@@ -454,9 +454,6 @@ def MaxMin_AS(params, alg):
     #             (with survival time and censor data columns)                 #
     # net:       PPI network                                                   #
     #                                                                          #
-    # greedy:    greedy solution                                               #
-    # best_theo: best theoretical solution                                     #
-    #                                                                          #
     # ant:       number of ants in the colony                                  #
     # K:         desired subnetwork size                                       #
     # trials:    maximum number of trials                                      #
