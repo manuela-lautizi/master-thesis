@@ -153,7 +153,7 @@ for i in range(simulations):
 # Extraction subnetwork
 # =============================================================================
 size = 500
-start = random.choice(G.nodes())
+start = random.choice(list(G.nodes()))
 
 nodes = MMAS.extract(G, start, size)
 subG = G.subgraph(nodes)
