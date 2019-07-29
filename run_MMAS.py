@@ -12,7 +12,7 @@ import numpy as np
 import networkx as nx
 import random
 import library_MMAS as MMAS
-import library_MMAS_2 as MMAS_2 
+import library_MMAS_2 as MMAS_corrMat 
 from importlib import reload
 reload(MMAS)
 
@@ -100,7 +100,7 @@ for i in range(simulations):
     sim_G = sim.copy()
     print("--------PCA--------")      
     par_pca = alpha, beta, rho, ph_min, ph_max, sim_gx, sim_G, greedy_pca[1], best_theo_pca, ants, K, trials, i, corr2
-    antRes_pca, time_pca, trials_pca, best_pca = MMAS_2.MaxMin_AS_sim(par_pca, "pca")
+    antRes_pca, time_pca, trials_pca, best_pca = MMAS_corrMat.MaxMin_AS_sim(par_pca, "pca")
     print("best pca", best_pca)
     '''
     print("-------KMEANS-------")
