@@ -12,7 +12,7 @@ import numpy as np
 import networkx as nx
 import random
 import library_MMAS as MMAS
-import library_MMAS_2 as MMAS_corrMat 
+import MMAS_corrMat 
 from importlib import reload
 reload(MMAS)
 
