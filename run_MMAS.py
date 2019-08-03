@@ -11,8 +11,8 @@ import pandas as pd
 import numpy as np
 import networkx as nx
 import random
-import library_MMAS as MMAS
-import MMAS_corrMat 
+#import library_MMAS as MMAS
+import MMAS_corrMat as MMAS
 from importlib import reload
 reload(MMAS)
 
@@ -53,6 +53,7 @@ corr2 = sim_gx.iloc[:,:-2].corr()
 # =============================================================================
 # PCA
 # =============================================================================
+'''
 net_pca = sim.copy()
 for u, v, w in net_pca.edges(data=True):        
     pvals = [MMAS.comp_lrt_pca(sim_gx, fts) for fts in [[u], [v], [u,v]]]
@@ -69,7 +70,7 @@ print("Best greedy (PCA)", greedy_pca)
 
 best_theo_pca = [([1, 14, 30, 41], 2.947679414568686)]
 greedy_pca = ([17, 5, 3, 44], 0.9388180674292859)
-
+'''
 # =============================================================================
 # K-Means
 # =============================================================================
@@ -100,7 +101,7 @@ for i in range(simulations):
     sim_G = sim.copy()
     print("--------PCA--------")      
     par_pca = alpha, beta, rho, ph_min, ph_max, sim_gx, sim_G, greedy_pca[1], best_theo_pca, ants, K, trials, i, corr2
-    antRes_pca, time_pca, trials_pca, best_pca = MMAS_corrMat.MaxMin_AS_sim(par_pca, "pca")
+    antRes_pca, time_pca, trials_pca, best_pca = MMAS.MaxMin_AS_sim(par_pca, "pca")
     print("best pca", best_pca)
     '''
     print("-------KMEANS-------")
